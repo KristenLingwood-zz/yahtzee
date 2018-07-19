@@ -20,7 +20,7 @@ The Game
 
 Yahtzee is a chance-and-strategy dice rolling game. A game is played over 13 rounds.
 
-Each round, the player rolls five 6-sided dice. They make click on any number of dice
+Each round, the player rolls five 6-sided dice. They may click on any number of dice
 to "freeze" or "unfreeze" them (frozen dice are colored darker). They may re-roll the unfrozen dice
 up to 2 times.
 
@@ -32,49 +32,67 @@ After 13 rounds, the game is over, and the player's score is the total of each s
 Scoring Categories
 ------------------
 
-Ones 
-  The player scores 1 for every 1 in their dice
+=============== ======================================= ==============
+Category        Description                             Example Score
+=============== ======================================= ==============
+Ones            Score 1 for every 1                     1 1 2 3 4 = 2
+--------------- --------------------------------------- --------------
+Twos            Score 2 for every 2                     1 2 2 3 4 = 4
+--------------- --------------------------------------- --------------
+Threes          Score 3 for every 3                     1 2 3 3 3 = 9
+--------------- --------------------------------------- --------------
+Fours           Score 4 for every 4                     1 2 4 4 5 = 8
+--------------- --------------------------------------- --------------
+Fives           Score 5 for every 5                     1 2 5 5 5 = 15
+--------------- --------------------------------------- --------------
+Sixes           Score 6 for every 6                     1 2 3 6 6 = 12
+--------------- --------------------------------------- --------------
+3 of Kind       If 3+ of one value, score sum of all    1 2 3 3 3 = 12
+                dice (otherwise, score 0)               
+--------------- --------------------------------------- --------------
+4 of Kind       If 4+ of one value, score sum of all    1 2 2 2 2 = 8
+                dice (otherwise, score 0)
+--------------- --------------------------------------- --------------
+Full House      If 3 of one value and 2 of another,     2 2 3 3 3 = 25
+                score 25
+--------------- --------------------------------------- --------------
+Small Straight  If 4+ values in a row, score 30         1 2 3 4 6 = 30
+--------------- --------------------------------------- --------------
+Large Straight  If 5 values in a row, score 40          1 2 3 4 5 = 40
+--------------- --------------------------------------- --------------
+Yahtzee         If all values match, score 50           2 2 2 2 2 = 50
+--------------- --------------------------------------- --------------
+Chance          Score sum of all dice                   1 2 3 4 6 = 16
+--------------- --------------------------------------- --------------
 
-Twos
-  The player scores 2 for every 2 in their dice
+Example Round
+-------------
 
-Threes
-  The player scores 3 for every 3 in their dice
+The initial roll is: ``2 4 3 2 5``.
 
-Fours
-  The player scores 4 for every 4 in their dice
+The player decides to try to get as many twos as possible, and clicks to
+freeze both twos, then re-rolls. They now have: ``2 2 3 2 5``.
 
-Fives
-  The player scores 5 for every 5 in their dice
+The player decides to try for a full house, and freezes all of their
+twos and their three (hoping to roll another 3 to get a full house). They
+re-roll the die showing five and get ``2 2 3 2 6``.
 
-Sixes
-  The player scores 6 for every 6 in their dice
+Sadly, they didn't get their full house. They could score this as:
 
-Three of a Kind
-  If there are three of the same values in the dice,
-  the player scores the sum of all dice values. If there
-  are not 3 of a kind, the player scores 0.
+- *Twos*: for 6 points
 
-Four of a Kind
-  Same as Three of a Kind, but Four.
+- *Threes* for 3 points
 
-Full House
-  If the player has a full house (3 of one value, 2
-  of another), they score 25.
+- *Sixes*: for 6 points
 
-Small Straight
-  If the player has 4 values in a row, they score 30.
+- *Three of Kind: (twos) for 15 points
 
-Large Straight
-  If the player has 5 values in a row, they score 40.
+- *Chance*: for 15 points
 
-Yahtzee
-  If the player has all dice with the same value, they
-  score 50.
+Any other category they claimed on this round would score 0.
 
-Chance
-  The player scores the sum of all dice.
-  
+Tasks
+=====
 
 tasks:
 
