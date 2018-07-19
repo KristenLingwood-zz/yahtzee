@@ -75,10 +75,23 @@ Yahtzee
 Chance
   The player scores the sum of all dice.
   
-Task One: ______________
-========================
 
-XXX
+tasks:
 
-Two Two: _______________
-========================
+- read code and understand
+
+- it would be nice if the game started with the dice already rolled (rather than having to click the button). implement this.
+
+- show total score for each section & overall score
+
+- replace dice numbers with images of dice
+
+- add a "play again feature"
+
+- add a new scoring category for "two pair" (scoring 15)
+
+other ideas:
+
+- implement more complex scoring: you can find more
+  complex rules to try out at https://en.wikipedia.org/wiki/Yahtzee#Yahtzee_bonuses_and_Joker_rules
+
