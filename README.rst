@@ -2,6 +2,8 @@
 Yahtzee Game
 ============
 
+.. image:: screenshot.png
+
 Setup
 =====
 
