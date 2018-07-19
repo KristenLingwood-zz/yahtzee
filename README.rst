@@ -3,7 +3,6 @@ Yahtzee Game
 ============
 
 .. image:: screenshot.png
-  :scale: 50%
 
 Setup
 =====
