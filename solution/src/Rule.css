@@ -1,0 +1,19 @@
+.Rule {}
+
+.Rule-active:hover {
+  background-color: yellow;
+}
+
+.Rule td {
+  padding: 0.3em;
+  border-bottom: solid 1px black;
+}
+
+.Rule-name {
+  width: 100%;
+  text-align: left;
+}
+
+.Rule-score {
+  text-align: right;
+}
