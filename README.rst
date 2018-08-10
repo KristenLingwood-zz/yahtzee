@@ -188,6 +188,9 @@ React-specific and JavaScript-general things. Pick the ones that interest you.
 React-Specific
 --------------
 
+- A bug not fixed in our solution: you can assign the same dice to more
+  than one score line. Fix this.
+  
 - It would be nice if the game started with the dice already rolled (rather 
   than having to click the button). Implement this.
 
