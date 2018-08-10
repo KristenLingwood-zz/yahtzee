@@ -119,9 +119,19 @@ One: Draw Diagram of Components
 Read through the source code and make a diagram of the components, along with
 their props and state.
 
+As you read the code, think about which areas felt very easy to understand,
+and whether there were things that took a minute to understand. Add comments
+that would help the next reader in those areas.
 
-Two: Read ``Rules.js``
+Two: Fix Clicking Dice
 ----------------------
+
+You're supposed to click dice to toggle whether or not they're going to be
+re-rolled. This function isn't working, though. Figure out what's wrong or
+missing with teh code for this feature and fix it.
+
+Three: Read ``Rules.js``
+------------------------
 
 The system for evaluating a roll score is handled by a series of object
 oriented classes, since many of the rule are similar to each other.
@@ -131,9 +141,8 @@ In particular, what good practices of functional programmming (like use of
 higher-order-functions) do you note? How is having this code be object-oriented
 also useful?
 
-
-Three: Add Missing Rules
-------------------------
+Four: Add Missing Rules
+-----------------------
 
 Two evaluation rule classes in ``Rules.js`` are incomplete:
 
@@ -146,14 +155,14 @@ Two evaluation rule classes in ``Rules.js`` are incomplete:
 Write the classes for these rules.
 
 
-Four: Prevent Rolling More than 3 Times
+Five: Prevent Rolling More than 3 Times
 ---------------------------------------
 
 You should only get two chances per turn to re-roll, but the game has
 a bug where you can re-roll as often as you want. Fix this!
 
 
-Five: Disallow Re-Using Score Line
+Six: Disallow Re-Using Score Line
 ----------------------------------
 
 The game currently lets you keep re-scoring the same scoring line (so you
@@ -161,8 +170,8 @@ can score 3 of a kind several times, whereas you should only be able to allocate
 one set of dice here.) Fix this!
 
 
-Six: Celebrate!
----------------
+Lucky Seven: Celebrate!
+-----------------------
 
 Nice job!
 
@@ -176,20 +185,53 @@ Further Play
 There are lots of good ways to extend this game, letting you practice both
 React-specific and JavaScript-general things. Pick the ones that interest you.
 
+React-Specific
+--------------
+
 - It would be nice if the game started with the dice already rolled (rather 
   than having to click the button). Implement this.
 
 - Show total score for each section & the overall score.
 
-- Replace dice numbers with images of dice
-
-- The look and feel is super-drab. Add some CSS. Perhaps even any animation
-  for the dice when rolling!
+- The organization for this code is fairly simple: all of the code, including
+  tests, is in the top-level ``src/`` folder. This works, but may not be the
+  easiest/best way to organize the code, especially as the project grows.
+  Think about how you could improve this. Have you learned anything from your
+  company project that could help here?
 
 - Add code to detect when the game is over, and add a "play again?" feature
   that resets the game.
 
+- Replace dice numbers with images of dice. You could do this with images of
+  die, (harder), or you could learn about SVG, which could let you make
+  the look of the faces yourself by drawing the pips (harder).
+
+- There's an add-on library you could use with React for "styled components",
+  where you can move CSS out of ``.css`` files and into component
+  definitions. `Learn about this <https://www.styled-components.com/>`_ and
+  try it out.
+
+- There are tests for the scoring rules, but not for the React components.
+  Add some.
+
+Non-React-Specific
+------------------
+
+- The look and feel is super-drab. Add some CSS. Perhaps even any animation
+  for the dice when rolling!
+
 - Add a new scoring category for "two pair" (scoring 15)
+
+- Add a new scoring category for "trash"; this should score only for dice that
+  would not match any of the other right-hand categories (ie, not three of
+  a kind *and* not four of a kind *and* not a full house *and* ...). What could
+  be a good way to do this?
+
+- It would be great to track the highest score ever. Learn about JS
+  ``localStorage`` and store this so that it is display below the scoring area.
+
+- *Ambitious*: Write a backend that will store the score at the end of a game.
+  Do this in either Express/Node or Python/Flask.
 
 - Implement more complex scoring: you can find more
   complex rules to try out at https://en.wikipedia.org/wiki/Yahtzee#Yahtzee_bonuses_and_Joker_rules

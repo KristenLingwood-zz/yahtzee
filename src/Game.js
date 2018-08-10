@@ -38,7 +38,7 @@ class Game extends Component {
     }));
   }
 
-  toggleLocked = (idx) => {
+  toggleLocked(idx) {
     // toggle whether idx is in locked or not
     this.setState(st => ({
       locked: [
