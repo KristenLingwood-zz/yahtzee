@@ -1,1 +1,0 @@
-This is a classic dice game built with React.js. Run npm start in terminal to run application.

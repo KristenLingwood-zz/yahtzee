@@ -52,7 +52,7 @@ class TotalOneNumber extends Rule {
 
 class SumDistro extends Rule {
   evalRoll = dice => {
-    // do any of the counts meet of exceed this distro?
+    // do any of the counts meet or exceed this distro?
     return this.freq(dice).some(c => c >= this.count) ? this.sum(dice) : 0;
   };
 }

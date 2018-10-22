@@ -1,5 +1,3 @@
-.Rule {}
-
 .Rule-active:hover {
   background-color: yellow;
 }

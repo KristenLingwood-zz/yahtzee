@@ -28,12 +28,12 @@ class Game extends Component {
     }
   };
 
-  componentDidMount() {
-    this.roll();
-  }
+  // componentDidMount() {
+  //   this.roll();
+  // }
 
   roll = () => {
-    // roll dice whose indexes are in reroll
+    // roll dice whose indices are in reroll
     this.setState(st => ({
       dice: st.dice.map(
         (d, i) => (st.locked[i] ? d : Math.ceil(Math.random() * 6))
