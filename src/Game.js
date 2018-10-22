@@ -28,9 +28,9 @@ class Game extends Component {
     }
   };
 
-  // componentDidMount() {
-  //   this.roll();
-  // }
+  componentDidMount() {
+    this.roll();
+  }
 
   roll = () => {
     // roll dice whose indices are in reroll
